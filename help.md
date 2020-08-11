@@ -11,3 +11,10 @@
                     ------------------------------------
                     No repo name found.
 ```
+
+### Install `bower` and `bootstrap-social`
+
+```
+npm install bower -g
+bower install bootstrap-social
+```

@@ -10,20 +10,22 @@ description: How to run and use Jupyter lab on a remote machine without port map
 ### Install Jupyter lab
 
 The [official documentation](https://jupyter.org/install) is the best source for installing instructions. I prefer using docker and installing it inside it OR simply in a virtual environment using:
-```
+
+```bash
 pip install jupyterlab
 ```
 
 ### Add jupyter config file
 
 After activating the virtual environment, run
-```
+
+```bash
 jupyter notebook --generate-config
 ```
 
 Open the “jupyter_notebook_config.py” configuration file inside the “.jupyter” folder with your preferred text editor. Find the commented out configuration line that defines the value of “c.NotebookApp.ip”, and change the value to ‘0.0.0.0’ to allow remote connections from all IP addresses (realistically, you may not want to do this).
 
-```
+```bash
 $ vi ./.jupyter/jupyter_notebook_config.py
 # Configuration file for jupyter-notebook.
 ...
@@ -35,28 +37,31 @@ $ vi ./.jupyter/jupyter_notebook_config.py
 #c.NotebookApp.ip = 'localhost'
 c.NotebookApp.ip = '0.0.0.0'
 ```
+
 For more information on this, check out this [nice tutorial](https://luppeng.wordpress.com/2017/04/18/remote-access-to-jupyter-notebook/).
 
 ### Add a password
 
 Set a login password with the following command:
 
-```
+```bash
 $ jupyter notebook password
 Enter password:
 Verify password:
 [NotebookPasswordApp] Wrote hashed password to /home/user/.jupyter/jupyter_notebook_config.json
 ```
+
 A hash of the password is stored in the file listed above.
 
 ### Start Jupyter Lab
 
-```
+```bash
 jupyter lab --no-browser --port=8001
 ```
 
 This would start a jupyter lab at the following address: 
-```
+
+```bash
 <Remote-machne-IP>:8001
 ```
 

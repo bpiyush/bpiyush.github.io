@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2020-09-09
+date: 2020-10-21
 inline: true
 ---
 
-We submitted our [Cough Against COVID](https://coughagainstcovid.org/) work to AAAI 2021!
+We submitted our [Cough Against COVID](https://coughagainstcovid.org/) work to ICASSP 2021!

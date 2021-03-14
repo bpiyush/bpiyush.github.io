@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Piyush Bagad | Piyush Bagad</title>
+<title>Piyush Bagad | Privacy-Utility via GAN</title>
 <meta name="description" content="Research fellow @ Wadhwani AI | IIT Kanpur.
 ">
 
@@ -23,7 +23,7 @@
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/projects/2_privacy_gan/">
 
 <!-- Open Graph -->
 
@@ -76,7 +76,7 @@ MathJax.Hub.Config({
           </li>
           
           <!-- Blog -->
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="/blog/">
               blog
               
@@ -134,30 +134,35 @@ MathJax.Hub.Config({
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1>musings and blogs</h1>
-    <h2>a space for my (limited) writing</h2>
-  </div>
+  <header class="post-header">
+    <h1 class="post-title">Privacy-Utility via GAN</h1>
+    <p class="post-description">Generating shareable representation of data via adversarial nets</p>
+  </header>
 
+  <article>
+    <p>The urge for offering personalized products and services, and the need for acquiring new users fuel the practice of data sharing among companies. At the same time, data sharing faces the headwind of new laws emphasizing users’ privacy in data. Under the premise that sharing of data occurs from a giver to a recipient, we propose an approach to generation of representational-data for sharing, which achieves value-addition for the recipient’s tasks, while preserving privacy of users.</p>
 
-  <ul class="post-list">
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2020/jupyter-on-server/">Jupyter on Remote Machine without Port Mapping</a></h3>
-        <p class="post-meta">November 23, 2020</p>
-        <p>How to run and use Jupyter lab on a remote machine without port mapping to your local machine?</p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2020/covid-marathi/">(Marathi) Coronavirus - Why You Must Act Now</a></h3>
-        <p class="post-meta">September 30, 2020</p>
-        <p>General public awareness post for Coronavirus</p>
-      </li>
-    
-  </ul>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/privacy-gan-overview.png" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    <b>How to generate shareable representation of data?</b>: The goal is to develop a black box which takes in raw data, privacy policy and information about downstream task and outputs an appropriate representation of data that achieves desired utility while maintaining privacy.
+</div>
 
-  
+<h3 id="the-black-box">The Black Box</h3>
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/pgan-arch.png" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    <b>Privacy and Utility aware Generative adversarial nets</b>: We propose an adversarial framework based on Wasserstien GANs with G acting as a shareable-data generator with privacy and utility regularization to achieve a reasonable trade-off and D acting as an adversarial supervisor for G.
+</div>
+
+  </article>
 
 </div>
 

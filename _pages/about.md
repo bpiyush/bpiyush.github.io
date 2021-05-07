@@ -13,7 +13,8 @@ news: true
 social: true
 ---
 
-Hi! I am a Research Fellow at [Wadhwani AI](http://wadhwaniai.org){:target="\_blank"}. I am passionate about research and broadly interested in 3D computer vision, probabilistic modelling and inference.
+Hi! I am a Research Fellow at [Wadhwani AI](http://wadhwaniai.org){:target="\_blank"}. 
+I am passionate about research and have developed interest in a variety of areas: video understanding, 3D vision, probabilistic modelling & inference. I also have newly-found curiosity in geometric deep learning, deep generative models and so many other exciting areas in machine learning that evolve each day.
 
 At [Wadhwani AI](http://wadhwaniai.org){:target="\_blank"}, I have been primarily working on [estimating infant anthropometry from a monocular video](https://www.wadhwaniai.org/work/maternal-newborn-child-health/). Since the advent of the pandemic, I have also been working on [using cough as a biomarker to detect presence of CoVID-19](https://coughagainstcovid.org/).
 

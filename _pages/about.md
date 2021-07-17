@@ -13,7 +13,7 @@ news: true
 social: true
 ---
 
-Hi! I will be starting my Master's in AI at [University of Amsterdam](https://www.uva.nl/en). 
+Hi! I will be starting my Master's in AI at [University of Amsterdam](https://www.uva.nl/en) in Sept 2021. 
 I am passionate about research and have developed interest in a variety of areas: video understanding, 3D vision, probabilistic modelling & inference. I also have newly-found curiosity in geometric deep learning, deep generative models and so many other exciting areas in machine learning that evolve each day.
 
 In the past, I've been a Research Fellow at [Wadhwani AI](http://wadhwaniai.org){:target="\_blank"}. Here, I primarily worked on [estimating infant anthropometry from a monocular video](https://www.wadhwaniai.org/work/maternal-newborn-child-health/). During the pandemic, I also worked on [using cough as a biomarker to detect presence of CoVID-19](https://coughagainstcovid.org/).

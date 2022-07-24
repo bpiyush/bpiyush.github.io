@@ -4,4 +4,4 @@ date: 2022-04-10
 inline: true
 ---
 
-Our [Reproducibility Study](https://openreview.net/forum?id=HNlzT3G720t) on “Counterfactual Generative Networks” recieved the Best Paper Award at ML Reproducibility Challenge 2021!
+Our [paper](https://openreview.net/forum?id=HNlzT3G720t) recieved the Best Paper Award at [MLRC 2021](https://paperswithcode.com/rc2021)!

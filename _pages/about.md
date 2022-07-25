@@ -122,7 +122,7 @@ This is sample text wrapped around image. Let me check how long can it go? -->
 
 <div class="mydiv">
     <div class="leftdiv">
-      <img src="./assets/img/cac-3-looped.gif" alt="drawing" style="width:100%;"/>
+      <img src="./assets/img/cac-4-looped.gif" alt="drawing" style="width:100%;"/>
     </div>
     <div class="rightdiv">
       <div class="papertitle"><a href="https://arxiv.org/abs/2009.08790">Cough Against COVID: Evidence of COVID-19 Signature in Cough Sounds</a></div>
@@ -135,7 +135,7 @@ This is sample text wrapped around image. Let me check how long can it go? -->
 
 <div class="mydiv">
     <div class="leftdiv">
-      <img src="./assets/img/anthro-2-looped.gif" alt="drawing" style="width:100%;"/>
+      <img src="./assets/img/anthro-3-looped.gif" alt="drawing" style="width:100%;"/>
     </div>
     <div class="rightdiv">
       <div class="papertitle"><a href="https://www.wadhwaniai.org/programs/newborn-anthropometry/">Newborn Anthropometry: Estimating infant weight from a monocular video</a></div>

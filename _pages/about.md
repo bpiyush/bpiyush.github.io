@@ -74,7 +74,7 @@ This is sample text wrapped around image. Let me check how long can it go? -->
 }
 
 .papertitle {
-    font-size: 1.0vw;
+    font-size: 1.1vw;
     font-weight: bold;
     margin-bottom: 1%;
 }
@@ -111,11 +111,23 @@ This is sample text wrapped around image. Let me check how long can it go? -->
       <div class="papertitle"><a href="https://arxiv.org/abs/2203.14221">How Severe is Benchmark-Sensitivity in Video Self-Supervised Learning?</a></div>
       <div class="paperauthors">Fida Mohammad Thoker, Hazel Doughty, <b><u>Piyush Bagad</u></b>, Cees Snoek</div>
       <div class="papervenue">ECCV, 2022 (Tel Aviv, Israel)</div>
-      <div class="paperlinks"> <a href="https://arxiv.org/abs/2203.14221">ArXiv</a> &nbsp; | &nbsp; Project page &nbsp; | &nbsp; <a href="https://github.com/fmthoker/SEVERE-BENCHMARK">Code</a> </div>
+      <div class="paperlinks"> <a href="https://arxiv.org/abs/2203.14221">ArXiv</a> &nbsp; | &nbsp; <a href="https://bpiyush.github.io/SEVERE-website/">Project page</a> &nbsp; | &nbsp; <a href="https://github.com/fmthoker/SEVERE-BENCHMARK">Code</a> </div>
     </div>
 </div>
 <!-- <p><small>Work done during Master AI at UvA.</small></p> -->
 <!-- <div class="paperfootnote">Work done during Master AI at UvA.</div> -->
+
+<div class="mydiv">
+    <div class="leftdiv">
+      <img src="./assets/img/c3po-1.gif" alt="drawing" style="width:100%;"/>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="assets/pdf/c3po-1-12.pdf">C-3PO: Towards Rotation Equivariant Feature Detection and Description</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>*,  Floor Eijkelboom*, Mark Fokkema*, Danilo de Goede*, Paul Hilders*, Miltiadis Kofinas</div>
+      <div class="papervenue"><a href="https://vipriors.github.io/"> VIPrior Workshop</a>, ECCV, 2022 (Tel Aviv, Israel)</div>
+      <div class="paperlinks"> <a href="assets/pdf/c3po-1-12.pdf">Paper</a> &nbsp; | &nbsp; Project page &nbsp; | &nbsp; <a href="https://github.com/bpiyush/rotation-equivariant-lfm">Code</a> </div>
+    </div>
+</div>
 
 
 <h3>AI in the real-world</h3>

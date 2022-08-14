@@ -130,6 +130,22 @@ This is sample text wrapped around image. Let me check how long can it go? -->
 </div>
 
 
+<h3>Selected projects</h3>
+
+<div class="mydiv">
+    <div class="leftdiv">
+      <img src="./assets/img/re-cgn-cluster-1.png" alt="drawing" style="width:100%;"/>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="assets/pdf/re-cgn.pdf">Reproducibility Study of "Counterfactual Generative Networks"</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>*,  Paul Hilders*,  Jesse Maas*,  Danilo de Goede*</div>
+      <div class="papervenue" style="color:red;"><a href="https://paperswithcode.com/rc2021" style="color:red;">Best paper award</a></div>
+      <div class="papervenue"><a href="https://paperswithcode.com/rc2021"> ML Reproducibility Challenge</a>, ReScience Journal</div>
+      <div class="paperlinks"> <a href="https://zenodo.org/record/6574635#.YviVUexBy3J">Paper</a> &nbsp; | &nbsp; Project page &nbsp; | &nbsp; <a href="https://github.com/danilodegoede/fact-team3">Code</a> </div>
+    </div>
+</div>
+
+
 <h3>AI in the real-world</h3>
 
 <div class="mydiv">

@@ -58,6 +58,8 @@ This is sample text wrapped around image. Let me check how long can it go? -->
     margin: auto;
     transition: transform .2s; /* Animation */
     padding-right: 1%;
+    justify-content: center;
+    align-items: center;
 }
 .rightdiv {
     /* width: 300px; */
@@ -142,7 +144,20 @@ This is sample text wrapped around image. Let me check how long can it go? -->
       <div class="papervenue" style="color:red;"><a href="https://paperswithcode.com/rc2021" style="color:red;">Best paper award</a></div>
       <div class="papervenue"><a href="https://paperswithcode.com/rc2021"> ML Reproducibility Challenge</a>, ReScience Journal</div>
       <div class="papervenue">Invited to present at <a href="https://blog.neurips.cc/2022/08/15/journal-showcase/" style="color:red;">Journal Showcase Poster Session @ NeurIPS 2022.</a></div>
-      <div class="paperlinks"> <a href="https://zenodo.org/record/6574635#.YviVUexBy3J">Paper</a> &nbsp; | &nbsp; Project page &nbsp; | &nbsp; <a href="https://github.com/danilodegoede/fact-team3">Code</a> </div>
+      <div class="paperlinks"> <a href="https://zenodo.org/record/6574635#.YviVUexBy3J">Paper</a> &nbsp; | &nbsp; <a href="https://github.com/danilodegoede/fact-team3">Code</a> </div>
+    </div>
+</div>
+
+<div class="mydiv">
+    <div class="leftdiv">
+      <img src="./assets/img/clip-grounding-v5.gif" alt="drawing" style="width:100%;"/>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="assets/pdf/re-cgn.pdf">Quantifying CLIP’s ability to Perform Cross-Modal
+Grounding Using Attention-Model Explainability</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>*,  Paul Hilders*, Danilo de Goede*</div>
+      <div class="papervenue" style="color:red;">Best poster award in the I&E course at UvA</div>
+      <div class="paperlinks"> <a href="./assets/pdf/clip-grounding-poster.pdf">Poster</a> &nbsp; | &nbsp; <a href="https://github.com/bpiyush/CLIP-grounding">Code</a> &nbsp; | &nbsp; <a href="https://huggingface.co/spaces/PaulHilders/CLIPGroundingExplainability">Demo</a></div>
     </div>
 </div>
 

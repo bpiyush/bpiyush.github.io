@@ -144,7 +144,7 @@ This is sample text wrapped around image. Let me check how long can it go? -->
       <div class="papervenue" style="color:red;"><a href="https://paperswithcode.com/rc2021" style="color:red;">Best paper award</a></div>
       <div class="papervenue"><a href="https://paperswithcode.com/rc2021"> ML Reproducibility Challenge</a>, ReScience Journal</div>
       <div class="papervenue">Invited to present at <a href="https://blog.neurips.cc/2022/08/15/journal-showcase/" style="color:red;">Journal Showcase Poster Session @ NeurIPS 2022.</a></div>
-      <div class="paperlinks"> <a href="https://zenodo.org/record/6574635#.YviVUexBy3J">Paper</a> &nbsp; | &nbsp; <a href="https://github.com/danilodegoede/fact-team3">Code</a> </div>
+      <div class="paperlinks"> <a href="https://zenodo.org/record/6574635#.YviVUexBy3J">Paper</a> &nbsp; | &nbsp; <a href="https://github.com/danilodegoede/Re-CGN">Code</a> </div>
     </div>
 </div>
 

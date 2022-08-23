@@ -124,10 +124,10 @@ This is sample text wrapped around image. Let me check how long can it go? -->
       <img src="./assets/img/c3po-1.gif" alt="drawing" style="width:100%;"/>
     </div>
     <div class="rightdiv">
-      <div class="papertitle"><a href="assets/pdf/c3po-1-12.pdf">C-3PO: Towards Rotation Equivariant Feature Detection and Description</a></div>
+      <div class="papertitle"><a href="assets/pdf/c3po-camera-ready_compressed.pdf">C-3PO: Towards Rotation Equivariant Feature Detection and Description</a></div>
       <div class="paperauthors"><b><u>Piyush Bagad</u></b>*,  Floor Eijkelboom*, Mark Fokkema*, Danilo de Goede*, Paul Hilders*, Miltiadis Kofinas</div>
       <div class="papervenue"><a href="https://vipriors.github.io/"> VIPrior Workshop</a>, ECCV, 2022 (Tel Aviv, Israel)</div>
-      <div class="paperlinks"> <a href="assets/pdf/c3po-camera-ready.pdf">Paper</a> &nbsp; | &nbsp; Project page &nbsp; | &nbsp; <a href="https://github.com/bpiyush/rotation-equivariant-lfm">Code</a> </div>
+      <div class="paperlinks"> <a href="assets/pdf/c3po-camera-ready_compressed.pdf">Paper</a> &nbsp; | &nbsp; Project page &nbsp; | &nbsp; <a href="https://github.com/bpiyush/rotation-equivariant-lfm">Code</a> </div>
     </div>
 </div>
 

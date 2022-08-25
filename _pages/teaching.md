@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /teaching/
-title: Academics
+title: academics
 description: This section has details about my education, coursework and teaching.
 nav: true
 ---

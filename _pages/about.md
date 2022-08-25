@@ -6,7 +6,7 @@ description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: prof_pic_2_cropped.jpg
+  image: piyush-3.png
   address: >
 
 news: true
@@ -128,6 +128,19 @@ This is sample text wrapped around image. Let me check how long can it go? -->
       <div class="paperauthors"><b><u>Piyush Bagad</u></b>*,  Floor Eijkelboom*, Mark Fokkema*, Danilo de Goede*, Paul Hilders*, Miltiadis Kofinas</div>
       <div class="papervenue"><a href="https://vipriors.github.io/"> VIPrior Workshop</a>, ECCV, 2022 (Tel Aviv, Israel)</div>
       <div class="paperlinks"> <a href="assets/pdf/c3po-camera-ready_compressed.pdf">Paper</a> &nbsp; | &nbsp; Project page &nbsp; | &nbsp; <a href="https://github.com/bpiyush/rotation-equivariant-lfm">Code</a> </div>
+    </div>
+</div>
+
+<div class="mydiv">
+    <div class="leftdiv">
+      <img src="./assets/img/adobe-v2.gif" alt="drawing" style="width:100%;"/>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="https://dl.acm.org/doi/pdf/10.1145/3437963.3441712?casa_token=B3iCVyG_w8oAAAAA:MQtAcsFR6Zpupi_yzWHCTknzCCRvIi4Z9uMAvwTeZx3ZcctSOQUAUIVNNNIDGkvy7DAPqVY0nVnerg">Data-Sharing Economy: Value-Addition from Data meets Privacy</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>,  Subrata Mitra, Sunny Dhamnani, Atanu R Sinha, Raunak Gautam, Haresh Khanna</div>
+      <div class="papervenue"><a href="https://www.wsdm-conference.org/2021/accepted-demos.php"> WSDM Demos</a>, 2021 (Virtual event, Israel)</div>
+      <div class="papervenue">Work done during Internship at <a href="https://research.adobe.com/careers/bangalore/">Adobe Research (India)</a> in 2018.</div>
+      <div class="paperlinks"> <a href="https://dl.acm.org/doi/pdf/10.1145/3437963.3441712?casa_token=B3iCVyG_w8oAAAAA:MQtAcsFR6Zpupi_yzWHCTknzCCRvIi4Z9uMAvwTeZx3ZcctSOQUAUIVNNNIDGkvy7DAPqVY0nVnerg">Paper</a> &nbsp; | &nbsp; <a href="https://drive.google.com/file/d/1WkX1sr0gkex0acYLIKP93zrCnwhaoVwb/view?usp=sharing">Video</a> &nbsp; | &nbsp; <a href="https://github.com/bpiyush/privacy-GAN">Code</a> </div>
     </div>
 </div>
 

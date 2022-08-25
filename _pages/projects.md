@@ -1,8 +1,8 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: A selected subset of my projects
+description: A selected subset of my (old, undergrad) projects
 nav: true
 ---
 

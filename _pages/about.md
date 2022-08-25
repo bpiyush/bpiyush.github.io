@@ -28,6 +28,39 @@ Dr. [Piyush Rai](https://www.cse.iitk.ac.in/users/piyush/) and Dr. [Swaprava Nat
 
 <!-- During my undergrad, I was fortunate to have been a Research Intern at [Adobe Research](https://research.adobe.com/) where I worked on privacy and bias in ML models.  -->
 
+
+<style>
+  .profilelinks {
+    display: flex;
+    float: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+  .singlelink {
+    color: #243b55;
+    font-size: 1.4em;
+  }
+  .singlelink:hover {
+    color: #0076df;
+  }
+</style>
+
+<div class="profilelinks">
+<!-- <a href="./assets/pdf/piyush-cv-v1.0.pdf" style="font-size: 23px">CV</a> -->
+<a class="singlelink" href="./assets/pdf/piyush-cv-v1.0.pdf" target="_blank" title="CV"><i class="far fa-id-badge"></i></a>
+&nbsp; &nbsp; 
+<a class="singlelink" href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+&nbsp; &nbsp; 
+<a class="singlelink" href="https://github.com/{{ site.github_username }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+&nbsp; &nbsp; 
+<a class="singlelink" href="https://twitter.com/{{ site.twitter_username }}" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+&nbsp; &nbsp;
+<a class="singlelink" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+</div>
+
+
 <br>
 
 ### Selected publications

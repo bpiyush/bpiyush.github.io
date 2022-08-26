@@ -93,6 +93,7 @@ This is sample text wrapped around image. Let me check how long can it go? -->
     padding-right: 1%;
     justify-content: center;
     align-items: center;
+    vertical-align: middle;
 }
 .rightdiv {
     /* width: 300px; */
@@ -102,6 +103,7 @@ This is sample text wrapped around image. Let me check how long can it go? -->
     /* background-color: blue; */
     margin: auto;
     padding-left: 1%;
+    vertical-align: middle;
 }
 
 .leftdiv:hover {
@@ -109,28 +111,33 @@ This is sample text wrapped around image. Let me check how long can it go? -->
 }
 
 .papertitle {
-    font-size: 1.1vw;
+    /* font-size: 1.1vw; */
+    font-size: 0.95em;
     font-weight: bold;
     margin-bottom: 1%;
 }
 .paperauthors {
-    font-size: 0.9vw;
+    /* font-size: 0.9vw; */
+    font-size: 0.8em;
     margin-bottom: 0.;
 }
 .papervenue {
-    font-size: 0.9vw;
+    /* font-size: 0.9vw; */
+    font-size: 0.8em;
     margin-bottom: 0.;
     font-style: italic;
 }
 
 .paperfootnote {
-    font-size: 0.9vw;
+    /* font-size: 0.9vw; */
+    font-size: 0.7em;
     padding-bottom: 1%;
     margin-top: 0.;
 }
 
 .paperlinks {
-    font-size: 0.9vw;
+    /* font-size: 0.9vw; */
+    font-size: 0.7em;
     margin-top: 1%;
     font-weight: 400;
 }

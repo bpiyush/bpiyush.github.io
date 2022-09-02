@@ -63,8 +63,6 @@ Dr. [Piyush Rai](https://www.cse.iitk.ac.in/users/piyush/) and Dr. [Swaprava Nat
 
 <br>
 
-### Selected publications
-
 <!-- <br> -->
 
 <!-- <img src="https://raw.githubusercontent.com/fmthoker/SEVERE-BENCHMARK/main/media/concept_figure.png" alt="drawing" style="width:300px;"/>
@@ -142,7 +140,29 @@ This is sample text wrapped around image. Let me check how long can it go? -->
     font-weight: 400;
 }
 
+hr {
+    /* set width same as mydiv */
+    width: 100%;
+    height: 2px;
+    /* Set the hr color */
+    color: #f2f2f2;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 </style>
+
+
+### Selected publications
+
+<div class="mydiv">
+  <h5> <b>2022</b></h5>
+  <hr class="hr">
+</div>
+
+<!-- draw a gray colored horizontal line -->
+<!-- <div class="mydiv" style="background-color: #f2f2f2;"> -->
 
 
 <div class="mydiv">
@@ -155,6 +175,7 @@ This is sample text wrapped around image. Let me check how long can it go? -->
       <div class="papervenue">ECCV, 2022 (Tel Aviv, Israel)</div>
       <div class="paperlinks"> <a href="https://arxiv.org/abs/2203.14221">ArXiv</a> &nbsp; | &nbsp; <a href="https://bpiyush.github.io/SEVERE-website/">Project page</a> &nbsp; | &nbsp; <a href="https://github.com/fmthoker/SEVERE-BENCHMARK">Code</a> </div>
     </div>
+<!-- <hr style="width:100%;text-align:left;margin-left:0;margin-right:0;margin-bottom:0;"> -->
 </div>
 <!-- <p><small>Work done during Master AI at UvA.</small></p> -->
 <!-- <div class="paperfootnote">Work done during Master AI at UvA.</div> -->
@@ -169,6 +190,11 @@ This is sample text wrapped around image. Let me check how long can it go? -->
       <div class="papervenue"><a href="https://vipriors.github.io/"> VIPrior Workshop</a>, ECCV, 2022 (Tel Aviv, Israel)</div>
       <div class="paperlinks"> <a href="assets/pdf/c3po-camera-ready_compressed.pdf">Paper</a> &nbsp; | &nbsp; Project page &nbsp; | &nbsp; <a href="https://github.com/bpiyush/rotation-equivariant-lfm">Code</a> </div>
     </div>
+</div>
+
+<div class="mydiv">
+  <h5> <b>2021</b></h5>
+  <hr class="hr">
 </div>
 
 <div class="mydiv">

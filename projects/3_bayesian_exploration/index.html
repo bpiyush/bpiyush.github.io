@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Piyush Bagad | Bayesian Exploration</title>
+<meta name="description" content="Research fellow @ Wadhwani AI | IIT Kanpur.
+">
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.17.0/css/mdb.min.css" integrity="sha256-/SwJ2GDcEt5382i8zqDwl36VJGECxEoIcBIuoLmLR4g=" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"  integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="canonical" href="/projects/3_bayesian_exploration/">
+
+<!-- Open Graph -->
+
+
+<!-- LaTeX -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    inlineMath: [['$','$']]
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light bg-white navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      
+      
+      
+      
+      <a class="navbar-brand title font-weight-lighter" href="/">
+       <span class="font-weight-bold">Piyush</span>   Bagad
+      </a>
+      
+      <!-- Navbar Toogle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/teaching/">
+                academics
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                projects
+                
+              </a>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-5">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Bayesian Exploration</h1>
+    <p class="post-description">Hyperparameter optimisation through Bayesian Inference</p>
+  </header>
+
+  <article>
+    <p>Hyperparameters are ubiquitous in machine learning models. Almost every machine learning model has a set of hyperparameters that need to be fine-tuned to get desirable performance of the model. As ML practitioners and researchers would appreciate, often, well-tuned hyperparameters make a monumental difference in model performance.</p>
+
+<p>Consider the mapping between hyperparameters and the metric that is being optimised. Given a specific configuration of hyperparameters, say $\zeta \in \mathcal{X}$ where $\mathcal{X}$ denotes the space of hyperparameters, we train the model and monitor validation-set performance via some metric, say $\eta$, then we can represent this mapping to be a function $f$ s.t. $f(\zeta) = \eta$. Our goal  is to optimise this function over the space of all hyperparameters. Note that, often, it is hard to run a grid-search over all sets of hyperparameters because deep models are expensive to train. Thus, we can assume that we have information about this function $f$ only on a small set of points, $\zeta_{1}, \zeta_{2}, .., \zeta_{N}$. This poses itself as an optimisation problem with knowledge of the to-be-optimised function on a small number of points. For this reason, this functional mapping is called as the <em>black-box function</em>. Formally, assuming we are trying to maximize the metric, the optimisation problem we are trying to solve is:</p>
+
+\[\zeta_* = \arg\max_{\zeta \in \mathcal{X}} f(\zeta) \ \ \  \text{s.t.} \ f(z_{n}) = \eta_{n}, \ \forall n \in \{1, 2, .., N\}\]
+
+<p>This optimization is at two levels: Firstly, we are trying to achieve a reasonable estimate of the black-box function $f$, and secondly, we are trying to reach to the optima of this blackbox function.</p>
+
+<div class="row">
+    <div class="col-sm">
+        <img class="img-fluid" src="/assets/img/hyperparam_tuning.png" alt="" title="example image" />
+    </div>
+    <div class="col-sm">
+        <img class="img-fluid" src="/assets/img/pmi-1.png" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    <b>Hyperparameter problem setup</b>: (Left) We have a set of points in the hyperparameter space $\mathcal{X}$ on which we know the metric value obtained through task $T$. The goal is to obtain that configuration of the hyperparameters which will optimize the metric. (Right) For task $T$, we split the dataset $\mathcal{D}$ into $\mathcal{D}^{(train)}$ and $\mathcal{D}^{(val)}$. In the training phase, we fix the hyperparameter configuration to be $\zeta$, train the model using $\mathcal{D}^{(train)}$ and evaluate it on the $\mathcal{D}^{(val)}$ to obtain metric $\eta = f(\zeta)$.
+</div>
+
+<h4 id="bayesian-optimisation-for-hyperparameter-tuning">Bayesian Optimisation for Hyperparameter Tuning</h4>
+
+<p>We assume that we have a set 
+$\mathcal{D} := (\zeta_{n}, \eta_{n})_{n=1}^{N}$
+of observations. We assume a likelihood model with noise as</p>
+
+\[\eta_{n} \approx f(\zeta_{n}) \leftrightarrow \eta_n = f(\zeta_n) + \epsilon\]
+
+<p>for the limited amount of evaluations of $f$ we have. We also assume a prior on the behavior of $f$. As usual, we infer a posterior over $f$ and use this posterior information to find points in the search space $\mathcal{X}$ that can help us reach the optima. In order to find new points in $\mathcal{X}$, we define an <em>aquisition function</em></p>
+
+\[a : \mathcal{X} \rightarrow \mathbb{R}\]
+
+<p>This aquisition function controls the \textit{exploitation-exploration} trade-off. By exploitation, we mean that select new points from the region where we suspect the optima exists. For instance, if we are minimizing the black box function, then we will choose points on which the values of $f$ would be lower. By exploration, we set out finding points in the search space where we have very little observations about the behavior of $f$. Once we have found a new point, we evaluate $f$ on it and add it to the dataset $\mathcal{D}$ and update the posteriors and continue the procedure until some convergence criterion.
+Now, we will give a detailed account of using Bayesian optimization for choosing near-optimal hyperparameters. Let us say we have a machine learning task $T$ at hand. We have data $\mathcal{D}_{\text{task}} $ that we can use to train and test the model for task $T$. Let’s assume some split of the dataset.</p>
+
+\[\mathcal{D}_{\text{task}} = \mathcal{D}^{(\text{train})}_{\text{task}} \cup \mathcal{D}^{(\text{val})}_{\text{task}} \cup \mathcal{D}^{(\text{test})}_{\text{task}}\]
+
+<p>Let’s say the model for $T$ has hyperparameters $\zeta \in \mathcal{X}$ and the metric w.r.t which they are to be optimized be $\eta \in \mathbb{R}$. Assume $\zeta$ is $K$ dimensional with its components being continuous, categorical or ordinal.  The hyperparameters are related to the concerned metric by the black-box function.</p>
+
+\[f: \mathcal{X} \rightarrow \mathbb{R}; \ \ f(\zeta) = \eta\]
+
+<div class="row">
+    <div class="col-sm">
+        <img class="img-fluid" src="/assets/img/pmi-2.png" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    <b>Bayesian Optimization Routine</b>
+</div>
+
+<p>Considering the task T as an oracle which on input $\zeta$ outputs a metric value $\eta$, we now articulate the Bayesian optimization routine. Let’s say we have a surrogate model which models $f$ and we assume some prior $p(f)$ on $f$. Let the hyperparameters if the surrogate model and the prior together be denoted by $\Theta$.</p>
+
+<ul>
+  <li><strong>Initialization</strong>: Construct initial dataset with mapping of $\zeta_k$ to $\eta_k$ for $N$ such points.</li>
+  <li><strong>Repeat until convergence</strong>: (Can monitor some meta-metric to check convergence)
+    <ul>
+      <li>Compute the posterior predictive distribution mean and variance: 
+  	$ mean(\zeta | D_{surrogate}, \Theta) $,
+  	$ var(\zeta | D_{\text{surrogate}}, \Theta), \ \forall \zeta \in \mathcal{X} $.</li>
+      <li>Use the predictive mean and variance to compute the expected improvement
+  $ \alpha_{EI}(\zeta), \forall \  \zeta \in \mathcal{X}$</li>
+      <li>Choose a new point $\zeta_{new}$ based on maximum expected improvement.
+  $\zeta_{new} = \arg\max_{\zeta \in \mathcal{X}} \alpha_{\text{EI}}(\zeta)$</li>
+      <li>Pass $\zeta_{new}$ to the task T in order to compute $\eta_{new} = f(\zeta_{new})$.</li>
+      <li>Add $(\zeta_{new}, \eta_{new})$ to $D_{\text{surrogate}}$. Update the posterior and continue.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The properties we can extract from a Bayesian optimization model depend upon the choice of surrogate model we use to approximate the black-box function and the kind of acquisition function we
+use in the routine.</p>
+
+<h5 id="choice-of-surrogate-model">Choice of surrogate model</h5>
+
+<p>Typically, the most popular choice for surrogate model has been <a href="https://distill.pub/2019/visual-exploration-gaussian-processes/">Gaussian Processes</a>. A key limitation of GP based surrogate model is that its computational complexity scales cubicly in the number of examples. This is due to the matrix inversion of an N × N matrix during the
+posterior computation in GPs. This restricts the usability of GPs in a setting where large number of
+black-box function evaluations are necessary for reliable estimates. As a seminal work in this area, Snoek et al [9] introduce usage
+of Bayesian neural networks as a replacement to GPs to model the black-box function. They show impressive results on variety of vision and natural language tasks with the black box function being modelled by a fully-connected network with Bayesian linear regression on the last layer.</p>
+
+<h5 id="choice-of-acquisition-function">Choice of acquisition function</h5>
+
+<p>The choice of acquisition function to choose a new point in a sequential optimizer gives over the exploration-exploitation trade-off. Expected improvement [5] is one of the most popularly used method for choosing a new point in the optimization space in a sequential optimization based model.</p>
+
+\[\alpha_{EI}(\textbf{x}| \mathcal{D}, \theta) = \sigma(\textbf{x} | \mathcal{D}, \theta)\left( \gamma(\textbf{x})\Phi(\textbf{x}) + \mathcal{N}(\gamma(\textbf{x}) | 0, 1) \right)\]
+
+\[\text{where} \ \ \gamma(\textbf{x}) := \frac{f(\textbf{x}_{best}) - \mu(\textbf{x} | \mathcal{D}, \theta)}{\sigma(\textbf{x} | \mathcal{D}, \theta)}\]
+
+<p>It is noted in the literature that the EI criterion tends to be too greedy (exploitative) in nature. There is a recent work [8] that improves the criterion in the direction of making it more exploratory. Even in our preliminary experiments, we observed that the vanilla EI criterion tends to exaggerate the exploitative behavior.</p>
+
+<h4 id="experiments-and-results">Experiments and Results</h4>
+
+<p>We borrowed a simple implementation of Bayesian neural network from <code class="language-plaintext highlighter-rouge">pybnn</code> as our base model on which we built the Bayesian
+optimization routine. Our goal is to check Snoek et al [9] work on scalable Bayesian optimisation on a bunch of simple tasks:</p>
+<ul>
+  <li><strong>Task 1: Bayesian Linear Regression on a toy-dataset</strong>
+  We consider a toy-dataset and the task is to learn a Bayesian linear regressor on a hard-coded kernel on the one-dimensional dataset. The dataset consists of 10 data points and was provided as a part of assignment 1 of the course. Please refer to assignment 1 for more details about the dataset and the task. For the purpose of this project, we consider estimation of the following hyperparameters: $K$: kernel dimension, $\lambda$: linear regression regularization hyperparameter and $\beta$:  noise precision. We consider a fixed range of values for each of the parameters and discretize the space. The optimization of aquisition function operates in this discretized space. We obtained K = 3, β = 4.0, λ = 1.0 as the optimal hyperparameter configuration. This was in accordance with our Assignment 1 results. The visualization is shown in the following figure.</li>
+</ul>
+
+<div class="row">
+    <div class="col-sm">
+        <img class="img-fluid" src="/assets/img/part2_k_3.jpg" alt="" title="example image" />
+    </div>
+    <div class="col-sm">
+        <img class="img-fluid" src="/assets/img/task_2_results.png" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    (Left) <b>Task 1</b>: Visualization of results with obtained optimal hyperparameter setting on task 1. (Right) <b>Task 2</b>: Values for SMAC, TPE, Spearmint, DNGO taken from Snoek et al [9].
+</div>
+
+<ul>
+  <li><strong>Task 2: Logisitc Regression on MNIST dataset</strong>
+  In order to show the efficacy of the framework on a real-world dataset, we consider the task of logisitc regression on MNIST image dataset. This is one of the simplest benchmark tasks considered in the literature of hyperparameter optimization [2]. We consider a split of 50k/10k/10k for train/validation/test. For simplicity, we only consider two hyperparameters, $C$: regularization hyperparameter, $l$: intercept-scaling parameter of the \texttt{liblinear} package. We use only these two as against the four used in relevant literature because these are readily available with the \texttt{scikit-learn} logisitic regression package. However, our code is flexible enough to incorporate other hyperparameters. We obtained {C, l} = {3.775, 1.625} as the optimal setting on which we obtained 91.51% accuracy on the test set. The comparison with relevant literature is shown in the table above.</li>
+</ul>
+
+<p>For more details and other visualizations, please refer to our <a href="https://drive.google.com/file/d/1hhsqsXalFZ0cVtoIJeFDlOsoBOG375DE/view?usp=sharing">project report</a>.</p>
+
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    &copy; Copyright 2022 Piyush Bagad.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+    Last updated: September 02, 2022.
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- Load Core and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.0/umd/popper.min.js" integrity="sha256-OH05DFHUWzr725HmuHo3pnuvUUn+TJuj8/Qz9xytFEw=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.17.0/js/mdb.min.js"  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" integrity="sha256-V8SV2MO1FUb63Bwht5Wx9x6PVHNa02gv8BgH/uH3ung=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js" integrity="sha256-F/Xda58SPdcUCr+xhSGz9MA2zQBPb0ASEYKohl8UCHc=" crossorigin="anonymous"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+<!-- Load Mansory & imagesLoaded -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+<!-- Project Cards Layout -->
+<script type="text/javascript">
+  // Init Masonry
+  var $grid = $('.grid').masonry({
+    gutter: 10,
+    horizontalOrder: true,
+    itemSelector: '.grid-item',
+  });
+  // layout Masonry after each image loads
+  $grid.imagesLoaded().progress( function() {
+    $grid.masonry('layout');
+  });
+</script>
+
+
+
+
+
+
+
+</html>

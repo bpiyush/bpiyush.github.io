@@ -19,7 +19,7 @@ I am pursuing Master's in AI at the [University of Amsterdam](https://www.uva.nl
 <!-- Hi! I will be starting my Master's in AI at [University of Amsterdam](https://www.uva.nl/en) in Sept 2021. 
 I am passionate about research and have developed interest in a variety of areas: video understanding, 3D vision, probabilistic modelling & inference. I also have newly-found curiosity in geometric deep learning, deep generative models and so many other exciting areas in machine learning that evolve each day. -->
 
-In the past, I've been a Research Fellow at [Wadhwani AI](http://wadhwaniai.org){:target="\_blank"} where I primarily worked on [estimating infant anthropometry from a monocular video](https://www.wadhwaniai.org/work/maternal-newborn-child-health/). During the pandemic, I also worked on [using cough as a biomarker to detect presence of CoVID-19](https://coughagainstcovid.org/).
+In the past, I've been a Research Fellow at [Wadhwani AI](http://wadhwaniai.org){:target="\_blank"} where I primarily worked on [estimating infant anthropometry from a monocular video](https://www.wadhwaniai.org/work/maternal-newborn-child-health/). During the pandemic, I also worked on [using cough as a biomarker to detect presence of CoVID-19](https://www.wadhwaniai.org/programs/cough-against-covid/).
 
 Before that, I completed my Bachelor's in Mathematics at [IIT Kanpur](https://iitk.ac.in) where I worked with 
 Dr. [Piyush Rai](https://www.cse.iitk.ac.in/users/piyush/) and Dr. [Swaprava Nath](https://www.cse.iitb.ac.in/~swaprava/).

@@ -188,7 +188,7 @@ hr {
       <div class="papertitle"><a href="assets/pdf/c3po-camera-ready_compressed.pdf">C-3PO: Towards Rotation Equivariant Feature Detection and Description</a></div>
       <div class="paperauthors"><b><u>Piyush Bagad</u></b>*,  Floor Eijkelboom*, Mark Fokkema*, Danilo de Goede*, Paul Hilders*, Miltiadis Kofinas</div>
       <div class="papervenue"><a href="https://vipriors.github.io/"> VIPrior Workshop</a>, ECCV, 2022 (Tel Aviv, Israel)</div>
-      <div class="paperlinks"> <a href="assets/pdf/c3po-camera-ready_compressed.pdf">Paper</a> &nbsp; | &nbsp; Project page &nbsp; | &nbsp; <a href="https://github.com/bpiyush/rotation-equivariant-lfm">Code</a> </div>
+      <div class="paperlinks"> <a href="assets/pdf/c3po-camera-ready_compressed.pdf">Paper</a> &nbsp; | &nbsp; Project page &nbsp; |  &nbsp; <a href="assets/pdf/c3po_poster.pdf" download>Poster</a> | &nbsp; <a href="assets/pdf/c3po.pptx" download>Oral Presentation</a> </div>
     </div>
 </div>
 

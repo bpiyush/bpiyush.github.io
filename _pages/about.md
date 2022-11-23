@@ -232,10 +232,10 @@ hr {
       <img src="./assets/img/clip-grounding-v5.gif" alt="drawing" style="width:100%;"/>
     </div>
     <div class="rightdiv">
-      <div class="papertitle"><a href="assets/pdf/re-cgn.pdf">Quantifying CLIP’s ability to Perform Cross-Modal
+      <div class="papertitle"><a href="assets/pdf/clip-grounding-poster.pdf">Quantifying CLIP’s ability to Perform Cross-Modal
 Grounding Using Attention-Model Explainability</a></div>
       <div class="paperauthors"><b><u>Piyush Bagad</u></b>*,  Paul Hilders*, Danilo de Goede*</div>
-      <div class="papervenue" style="color:red;">Best poster award in the I&E course at UvA</div>
+      <div class="papervenue" style="color:red;">Best poster award in the Interpretability course at UvA</div>
       <div class="paperlinks"> <a href="./assets/pdf/clip-grounding-poster.pdf">Poster</a> &nbsp; | &nbsp; <a href="https://github.com/bpiyush/CLIP-grounding">Code</a> &nbsp; | &nbsp; <a href="https://huggingface.co/spaces/PaulHilders/CLIPGroundingExplainability">Demo</a></div>
     </div>
 </div>
@@ -266,5 +266,31 @@ Grounding Using Attention-Model Explainability</a></div>
       <div class="papervenue">Unpublished, 2019-2021 (Mumbai, India)</div>
       <div class="paperlinks"> ArXiv &nbsp; | &nbsp; <a href="https://www.wadhwaniai.org/programs/newborn-anthropometry/">Project page</a> &nbsp; | &nbsp; Code </div>
       <div class="paperfootnote">Media credits: <a href="https://www.wadhwaniai.org/programs/newborn-anthropometry/">Wadhwani AI</a></div>
+    </div>
+</div>
+
+<div class="mydiv">
+    <div class="leftdiv">
+      <img src="./assets/img/synthetic-example.png" alt="drawing" style="width:100%;"/>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="https://www.wadhwaniai.org/programs/newborn-anthropometry/">Synthetic Data Generation for Visual Weighing Machine</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Aman Dalmia, Siddharth Singh, Vishal Gupta, Aditya AS, Namrata Deka</div>
+      <div class="papervenue">Platform: Blender 2.8</div>
+      <!-- <div class="paperlinks"> ArXiv &nbsp; | &nbsp; <a href="https://www.wadhwaniai.org/programs/newborn-anthropometry/">Project page</a> &nbsp; | &nbsp; Code </div> -->
+      <div class="paperfootnote">Copyrights: <a href="https://www.wadhwaniai.org/programs/newborn-anthropometry/">Wadhwani AI</a></div>
+    </div>
+</div>
+
+<div class="mydiv">
+    <div class="leftdiv">
+      <img src="./assets/img/3d-model-v4.gif" alt="drawing" style="width:100%;"/>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="https://www.wadhwaniai.org/programs/newborn-anthropometry/">Deformable 3D Model for Newborn Babies</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Aman Dalmia, Rahul Kumar, Arsh Verma, Rahul Panicker</div>
+      <div class="papervenue">Underlying Model: SMIL (Nicholas Hesse et. al)</div>
+      <!-- <div class="paperlinks"> ArXiv &nbsp; | &nbsp; <a href="https://www.wadhwaniai.org/programs/newborn-anthropometry/">Project page</a> &nbsp; | &nbsp; Code </div> -->
+      <div class="paperfootnote">Copyrights: <a href="https://www.wadhwaniai.org/programs/newborn-anthropometry/">Wadhwani AI</a></div>
     </div>
 </div>

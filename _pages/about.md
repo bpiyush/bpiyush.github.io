@@ -166,7 +166,7 @@ hr {
 
 <div class="mydiv">
     <div class="leftdiv">
-      <img src="./assets/img/tot-v2.png" alt="drawing" style="width:100%;"/>
+      <img src="./assets/img/tot-v3.png" alt="drawing" style="width:100%;"/>
     </div>
     <div class="rightdiv">
       <div class="papertitle"><a href="https://arxiv.org/abs/2301.02074">Test of Time: Instilling Video-Language Models with a Sense of Time</a></div>
@@ -307,8 +307,13 @@ Grounding Using Attention-Model Explainability</a></div>
 </div>
 
 
-#### miscellaneous
+<div class="mydiv">
+  <h5> <b>Miscellaneous</b></h5>
+  <hr class="hr">
+  <ul style="font-size:15px">
+    <li> Service: Emergency reviewer at ECCV 2022, Reviewer at CVPR 2023 </li>
+    <li> Teaching: TA for Deep Learning (<a href="https://uvadlc-notebooks.readthedocs.io/en/latest/">DL1</a>) at the University of Amsterdam </li>
+    <li> Invited lecture for the Fairness in AI course at the University of Amsterdam </li>
+  </ul>
+</div>
 
-* Service: Emergency reviewer at ECCV 2022, Reviewer at CVPR 2023
-* Teaching: TA for Deep Learning ([DL1](https://uvadlc-notebooks.readthedocs.io/en/latest/)) at the University of Amsterdam
-* Invited lecture for the Fairness course at the University of Amsterdam

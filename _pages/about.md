@@ -166,7 +166,7 @@ hr {
 
 <div class="mydiv">
     <div class="leftdiv">
-      <img src="./assets/img/tot-v1.png" alt="drawing" style="width:100%;"/>
+      <img src="./assets/img/tot-v2.png" alt="drawing" style="width:100%;"/>
     </div>
     <div class="rightdiv">
       <div class="papertitle"><a href="https://arxiv.org/abs/2301.02074">Test of Time: Instilling Video-Language Models with a Sense of Time</a></div>

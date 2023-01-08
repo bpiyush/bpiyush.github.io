@@ -164,6 +164,17 @@ hr {
 <!-- draw a gray colored horizontal line -->
 <!-- <div class="mydiv" style="background-color: #f2f2f2;"> -->
 
+<div class="mydiv">
+    <div class="leftdiv">
+      <img src="./assets/img/tot-v1.png" alt="drawing" style="width:100%;"/>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="https://arxiv.org/abs/2301.02074">Test of Time: Instilling Video-Language Models with a Sense of Time</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Makarand Tapaswi, Cees G. M. Snoek</div>
+      <div class="papervenue">Arxiv</div>
+      <div class="paperlinks"> <a href="https://arxiv.org/abs/2301.02074">ArXiv</a> &nbsp; | &nbsp; <a href="#">Project page (coming soon)</a> &nbsp; | &nbsp; <a href="#">Code (coming soon)</a> </div>
+    </div>
+</div>
 
 <div class="mydiv">
     <div class="leftdiv">
@@ -294,3 +305,10 @@ Grounding Using Attention-Model Explainability</a></div>
       <div class="paperfootnote">Copyrights: <a href="https://www.wadhwaniai.org/programs/newborn-anthropometry/">Wadhwani AI</a></div>
     </div>
 </div>
+
+
+#### miscellaneous
+
+* Service: Emergency reviewer at ECCV 2022, Reviewer at CVPR 2023
+* Teaching: TA for Deep Learning ([DL1](https://uvadlc-notebooks.readthedocs.io/en/latest/)) at the University of Amsterdam
+* Invited lecture for the Fairness course at the University of Amsterdam

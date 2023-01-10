@@ -13,6 +13,8 @@ news: true
 social: true
 ---
 
+<span style="color:red">**Kind note**</span>: I am currently pursuing [ELLIS Honors Thesis](https://ivi.fnwi.uva.nl/ellis/wp-content/uploads/2020/12/ELLIS-MSc-honours-programme.pdf). Post that, I am looking for PhD opportunities in video/multimodal understanding. I am also open to internships between the end of the MSc program and start of a PhD.
+
 I am pursuing Master's in AI at the [University of Amsterdam](https://www.uva.nl/en). Along with the coursework, I conduct research on video understanding at the [VISLab](https://ivi.fnwi.uva.nl/vislab/) advised by Prof. dr. [Cees Snoek](https://www.ceessnoek.info/) and Dr. [Makarand Tapaswi](https://www.iiit.ac.in/people/faculty/Makarand/)
 <!-- (IIIT Hyderabad, India) -->.
 

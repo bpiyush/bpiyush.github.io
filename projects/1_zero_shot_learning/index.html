@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Piyush Bagad | Attention-based Zero-shot Classification</title>
+<meta name="description" content="Research fellow @ Wadhwani AI | IIT Kanpur.
+">
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.17.0/css/mdb.min.css" integrity="sha256-/SwJ2GDcEt5382i8zqDwl36VJGECxEoIcBIuoLmLR4g=" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"  integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="canonical" href="/projects/1_zero_shot_learning/">
+
+<!-- Open Graph -->
+
+
+<!-- LaTeX -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    inlineMath: [['$','$']]
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light bg-white navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      
+      
+      
+      
+      <a class="navbar-brand title font-weight-lighter" href="/">
+       <span class="font-weight-bold">Piyush</span>   Bagad
+      </a>
+      
+      <!-- Navbar Toogle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/teaching/">
+                academics
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                projects
+                
+              </a>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-5">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Attention-based Zero-shot Classification</h1>
+    <p class="post-description">Learnt attention prior for ZSL tasks</p>
+  </header>
+
+  <article>
+    <p>Humans have a remarkable ability of recognizing object classes even if they have not been exposed to images of such objects. Computer vision systems tend to perform extremely well with sufficient supervision. Typically, the set of classes at test time for such systems are a subset of the classes that constitute the training data. In a zero-shot learning setup, we measure the model’s ability to generalize well to unseen classes during test time. For instance, as shown in the following figure, you might have classes like <em>Tiger</em>, <em>Buffallo</em>, <em>Horse</em> etc. in your train set but might encounter a completely different class of wild-animal during inference. Along with images, we also have some form of <em>class description</em>, often called as <code class="language-plaintext highlighter-rouge">class attribute vectors</code> as part of the training set. Henceforth, I will refer to this classification task as ZSL problem.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/zsl.png" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    <b>Zero-shot Learning</b>: We want the model to be able to generalize well for unseen class images at test-time.
+</div>
+
+<h4 id="attention-for-discriminative-power">Attention for discriminative power</h4>
+
+<p>The main challenge in ZSL problem is to make the model align the visual features of an image semantically with the class attribute vectors. However, using global features may prove to be sub-optimal since local features may be more helpful in discriminating closely related classes, some of which may be unseen. The primary motivation of incorporating attention in ZSL setting is to make the model focus and learn more discriminative visual features for better generalization. This can be illustrated by the following example: If we have the class of horses in the training set and that of zebras as unseen class, it may not be beneficial to have local features comprising of description of the feet of the animals. Rather, it may be beneficial to only selectively attend to the local features that are good enough to discriminate between a horse and a zebra. With this motivation, we propose a learnt attention-based prior to alleviate model’s alienity of unseen classes.</p>
+
+<h4 id="approach">Approach</h4>
+
+<p>We follow the route of embedding the attribute vectors into the visual features space based on the observations in [9]. The class distributions to be learnt in the visual space are learnt based on attention-weighed local region-based visual features. As illustrated in the following figure, for input image, the CNN model provides visual features $x$ which is further passed to the attention network which gives attention-weighted features $\hat{x} = x \odot NN(x, a_{c})$. On the other end, attribute vector $a_{c}$ is used to compute the means and variance of all classes to produce class probabilities for $x$. The combination of the two quantities computes gives the softmax loss which can be minimized using gradient-descent to find optimal settings of neural networks. You can checkout the details of training and inference routines in the <a href="https://drive.google.com/file/d/1OkahHv54mfyazKJqItNvR2B2cUdsuh-Q/view?usp=sharing">report</a>.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/block-diagram-v2.png" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    <b>Attention in ZSL</b>: CNN-based features are weighed by output of the attention network.
+</div>
+
+<h4 id="experimental-evaluation">Experimental Evaluation</h4>
+
+<p><strong>Datasets</strong>: We evaluate on the Caltech-UCSD Birds 200(CUB-200) and Animal With Attributes(AWA) datasets. These are standard datasets for ZSL tasks and you can find more details in the <a href="https://drive.google.com/file/d/1OkahHv54mfyazKJqItNvR2B2cUdsuh-Q/view?usp=sharing">report</a>.</p>
+
+<p><strong>Results</strong>: The following table notes the test accuracies obtained on each of the two datasets. The train-test split is the same
+that is used in the literature for ZSL. We have reported top 1 accuracy i.e., average of the accuracy over all the unseen classes. Though we have put the attention module on the global features coming from the ResNet 101 network. it’s still beating the state of the art work on AWA dataset. The model will improve further on incorporating attention over the local features. Other approach to the same could be to have a network instead of ResNet 101 which is used in task like object detection since it will give better features correspondiong to the attention task similar to what is done in Stacked Semantic Attention Framework.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/data.png" alt="" title="example image" />
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/results.png" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    [Left] Sample images from the CUB-200 and AwA datasets respectively. [Right] Comparison of top-1 accuracy over all unseen classes in the test set.
+</div>
+
+<h4 id="conclusion-and-future-work">Conclusion and Future Work</h4>
+
+<p>The proposed approach is one of the early attempts at incorporating attention for Zero-shot Learning. [5] is to the best of our knowledge, the only other attempt at incorporating attention in ZSL. Our model can be trained in an end-to-end manner without having to separately pretrain the attention network or the generative network. The alternate update scheme of the attention and the generative network ensures we can train the whole model end to end. Another merit of our approach is that we have generative modelling of the class conditional distributions, which can help us easily extend our approach to transductive/semi-supervised setting like in [6]. Future research could explore better local visual features, sophisticated generative models like VAEs and improved attention mechanism.</p>
+
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    &copy; Copyright 2023 Piyush Bagad.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+    Last updated: January 10, 2023.
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- Load Core and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.0/umd/popper.min.js" integrity="sha256-OH05DFHUWzr725HmuHo3pnuvUUn+TJuj8/Qz9xytFEw=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.17.0/js/mdb.min.js"  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" integrity="sha256-V8SV2MO1FUb63Bwht5Wx9x6PVHNa02gv8BgH/uH3ung=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js" integrity="sha256-F/Xda58SPdcUCr+xhSGz9MA2zQBPb0ASEYKohl8UCHc=" crossorigin="anonymous"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+<!-- Load Mansory & imagesLoaded -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+<!-- Project Cards Layout -->
+<script type="text/javascript">
+  // Init Masonry
+  var $grid = $('.grid').masonry({
+    gutter: 10,
+    horizontalOrder: true,
+    itemSelector: '.grid-item',
+  });
+  // layout Masonry after each image loads
+  $grid.imagesLoaded().progress( function() {
+    $grid.masonry('layout');
+  });
+</script>
+
+
+
+
+
+
+
+</html>

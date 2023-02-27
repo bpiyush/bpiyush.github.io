@@ -173,7 +173,7 @@ hr {
     <div class="rightdiv">
       <div class="papertitle"><a href="https://arxiv.org/abs/2301.02074">Test of Time: Instilling Video-Language Models with a Sense of Time</a></div>
       <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Makarand Tapaswi, Cees G. M. Snoek</div>
-      <div class="papervenue">Arxiv</div>
+      <div class="papervenue">CVPR 2023 (Vancouver, Canada)</div>
       <div class="paperlinks"> <a href="https://arxiv.org/abs/2301.02074">ArXiv</a> &nbsp; | &nbsp; <a href="#">Project page (coming soon)</a> &nbsp; | &nbsp; <a href="#">Code (coming soon)</a> </div>
     </div>
 </div>

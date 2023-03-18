@@ -168,13 +168,16 @@ hr {
 
 <div class="mydiv">
     <div class="leftdiv">
-      <img src="./assets/img/tot-v3.png" alt="drawing" style="width:100%;"/>
+      <img src="./assets/img/teaser-v1-2x.gif" alt="drawing" style="width:100%;"/>
     </div>
     <div class="rightdiv">
       <div class="papertitle"><a href="https://arxiv.org/abs/2301.02074">Test of Time: Instilling Video-Language Models with a Sense of Time</a></div>
       <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Makarand Tapaswi, Cees G. M. Snoek</div>
-      <div class="papervenue">CVPR 2023 (Vancouver, Canada)</div>
-      <div class="paperlinks"> <a href="https://arxiv.org/abs/2301.02074">ArXiv</a> &nbsp; | &nbsp; <a href="#">Project page (coming soon)</a> &nbsp; | &nbsp; <a href="#">Code (coming soon)</a> </div>
+      <div class="papervenue">CVPR 2023</div>
+      <div class="papervenue">Also presented at Workshop on Understanding Foundation Models at ICLR 2023</div>
+      <div class="paperlinks"> <a href="https://arxiv.org/abs/2301.02074">ArXiv</a> &nbsp; | &nbsp; <a href="https://arxiv.org/abs/2301.02074">Paper</a> &nbsp; | &nbsp; <a href="https://bpiyush.github.io/testoftime-website/">Project page</a> &nbsp; | &nbsp; <a href="https://github.com/bpiyush/TestOfTime">Code</a> &nbsp; | &nbsp;
+      <a href="#">Poster (⌛)</a> &nbsp; | &nbsp; <a href="#">Video (⌛)</a> 
+      </div> 
     </div>
 </div>
 

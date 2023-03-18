@@ -58,7 +58,7 @@ Here is a an overview of my relevant coursework:
     <td class="tg-0pky">UvA</td>
   </tr>
   <tr>
-    <td class="tg-0pky"><a href="https://uvaml1.github.io/" target="_blank" rel="noopener noreferrer">Machine Learning 1</a> &amp; 2*</td>
+    <td class="tg-0pky"><a href="https://uvaml1.github.io/" target="_blank" rel="noopener noreferrer">Machine Learning 1</a> &amp; 2</td>
     <td class="tg-0pky">UvA</td>
   </tr>
   <tr>
@@ -79,6 +79,10 @@ Here is a an overview of my relevant coursework:
   </tr>
   <tr>
     <td class="tg-0pky">Interpretability and Explainability</td>
+    <td class="tg-0pky">UvA</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Knowledge Representation and Reasoning</td>
     <td class="tg-0pky">UvA</td>
   </tr>
   <tr>

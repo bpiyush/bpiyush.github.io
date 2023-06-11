@@ -176,7 +176,7 @@ hr {
       <div class="papervenue">CVPR 2023</div>
       <div class="papervenue">Also presented at Workshop on Understanding Foundation Models at ICLR 2023</div>
       <div class="paperlinks"> <a href="https://arxiv.org/abs/2301.02074">ArXiv</a> &nbsp; | &nbsp; <a href="https://arxiv.org/abs/2301.02074">Paper</a> &nbsp; | &nbsp; <a href="https://bpiyush.github.io/testoftime-website/">Project page</a> &nbsp; | &nbsp; <a href="https://github.com/bpiyush/TestOfTime">Code</a> &nbsp; | &nbsp;
-      <a href="#">Poster (⌛)</a> &nbsp; | &nbsp; <a href="#">Video (⌛)</a> 
+      <a href="https://bpiyush.github.io/testoftime-website/media/testoftime-v1.2-3.pdf">Poster</a> &nbsp; | &nbsp; <a href="https://www.youtube.com/watch?v=RTRRdrA5H88">Video</a> 
       </div> 
     </div>
 </div>

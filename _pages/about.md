@@ -15,13 +15,16 @@ social: true
 
 <!-- <span style="color:red">**Kind note**</span>: I am currently pursuing [ELLIS Honors Thesis](https://ivi.fnwi.uva.nl/ellis/wp-content/uploads/2020/12/ELLIS-MSc-honours-programme.pdf). Post that, I am looking for PhD opportunities in video/multimodal understanding. I am also open to internships between the end of the MSc program and start of a PhD. -->
 
-I am pursuing Master's in AI at the [University of Amsterdam](https://www.uva.nl/en). Along with the coursework, I conduct research on video understanding at the [VISLab](https://ivi.fnwi.uva.nl/vislab/) advised by Prof. dr. [Cees Snoek](https://www.ceessnoek.info/) and Dr. [Makarand Tapaswi](https://www.iiit.ac.in/people/faculty/Makarand/)
-<!-- (IIIT Hyderabad, India) -->.
+
+I am a first-year DPhil student advised by [Prof. Andrew Zisserman](https://www.robots.ox.ac.uk/~az/) at the [VGG Lab](https://www.robots.ox.ac.uk/~vgg/) at the [University of Oxford](https://www.ox.ac.uk/). I am interested in all kinds of video understanding. 
+
+Previously, I finished my Master's in AI at the [University of Amsterdam](https://www.uva.nl/en). Along with the coursework, I did research on video understanding at the [VISLab](https://ivi.fnwi.uva.nl/vislab/) advised by Prof. dr. [Cees Snoek](https://www.ceessnoek.info/) and Dr. [Makarand Tapaswi](https://www.iiit.ac.in/people/faculty/Makarand/). 
+<!-- (IIIT Hyderabad, India) -->
 
 <!-- Hi! I will be starting my Master's in AI at [University of Amsterdam](https://www.uva.nl/en) in Sept 2021. 
 I am passionate about research and have developed interest in a variety of areas: video understanding, 3D vision, probabilistic modelling & inference. I also have newly-found curiosity in geometric deep learning, deep generative models and so many other exciting areas in machine learning that evolve each day. -->
 
-In the past, I've been a Research Fellow at [Wadhwani AI](http://wadhwaniai.org){:target="\_blank"} where I primarily worked on [estimating infant anthropometry from a monocular video](https://www.wadhwaniai.org/work/maternal-newborn-child-health/). During the pandemic, I also worked on [using cough as a biomarker to detect presence of CoVID-19](https://www.wadhwaniai.org/programs/cough-against-covid/).
+In the past, I've been a Research Fellow at [Wadhwani AI](http://wadhwaniai.org) where I primarily worked on [estimating infant anthropometry from a monocular video](https://www.wadhwaniai.org/work/maternal-newborn-child-health/). During the pandemic, I also worked on [using cough as a biomarker to detect presence of CoVID-19](https://www.wadhwaniai.org/programs/cough-against-covid/).
 
 Before that, I completed my Bachelor's in Mathematics at [IIT Kanpur](https://iitk.ac.in) where I worked with 
 Dr. [Piyush Rai](https://www.cse.iitk.ac.in/users/piyush/) and Dr. [Swaprava Nath](https://www.cse.iitb.ac.in/~swaprava/).

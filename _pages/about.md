@@ -162,12 +162,33 @@ hr {
 ### Selected publications
 
 <div class="mydiv">
-  <h5> <b>2022</b></h5>
+  <h5> <b>2024</b></h5>
   <hr class="hr">
 </div>
 
 <!-- draw a gray colored horizontal line -->
 <!-- <div class="mydiv" style="background-color: #f2f2f2;"> -->
+
+
+<div class="mydiv">
+    <div class="leftdiv">
+      <img src="./assets/img/pitch_on_spectrogram-compressed.gif" alt="drawing" style="width:100%;"/>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="https://arxiv.org/abs/2411.11222">The Sound of Water: Inferring Physical Properties from Pouring Liquids</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Makarand Tapaswi, Cees G. M. Snoek, Andrew Zisserman</div>
+      <div class="papervenue">ArXiV 2024</div>
+      <div class="paperlinks"> <a href="https://arxiv.org/abs/2411.11222">ArXiv</a> &nbsp; | &nbsp; <a href="https://arxiv.org/abs/2411.11222">Paper</a> &nbsp; | &nbsp; <a href="https://bpiyush.github.io/pouring-water-website/">Project page</a> &nbsp; | &nbsp; <a href="https://github.com/bpiyush/SoundOfWater">Code</a> &nbsp; | &nbsp;
+      <a href="#">Poster</a> &nbsp; | &nbsp; <a href="#">Video</a> 
+      </div> 
+    </div>
+</div>
+
+<div class="mydiv">
+  <h5> <b>2023</b></h5>
+  <hr class="hr">
+</div>
+
 
 <div class="mydiv">
     <div class="leftdiv">
@@ -182,6 +203,12 @@ hr {
       <a href="https://bpiyush.github.io/testoftime-website/media/testoftime-v1.2-3.pdf">Poster</a> &nbsp; | &nbsp; <a href="https://www.youtube.com/watch?v=RTRRdrA5H88">Video</a> 
       </div> 
     </div>
+</div>
+
+
+<div class="mydiv">
+  <h5> <b>2022</b></h5>
+  <hr class="hr">
 </div>
 
 <div class="mydiv">

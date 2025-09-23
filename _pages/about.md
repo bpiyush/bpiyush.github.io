@@ -6,7 +6,7 @@ description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: piyush-3.png
+  image: dp-2024.jpg
   address: >
 
 news: true
@@ -16,7 +16,7 @@ social: true
 <!-- <span style="color:red">**Kind note**</span>: I am currently pursuing [ELLIS Honors Thesis](https://ivi.fnwi.uva.nl/ellis/wp-content/uploads/2020/12/ELLIS-MSc-honours-programme.pdf). Post that, I am looking for PhD opportunities in video/multimodal understanding. I am also open to internships between the end of the MSc program and start of a PhD. -->
 
 
-I am a first-year DPhil student advised by [Prof. Andrew Zisserman](https://www.robots.ox.ac.uk/~az/) at the [VGG Lab](https://www.robots.ox.ac.uk/~vgg/) at the [University of Oxford](https://www.ox.ac.uk/). I am interested in all kinds of video understanding. 
+I am a DPhil student at the [VGG Lab](https://www.robots.ox.ac.uk/~vgg/) (Oxford)advised by [Prof. Andrew Zisserman](https://www.robots.ox.ac.uk/~az/) at the [University of Oxford](https://www.ox.ac.uk/). I am interested in all kinds of video understanding, specially time-sensitive video understanding. 
 
 Previously, I finished my Master's in AI at the [University of Amsterdam](https://www.uva.nl/en). Along with the coursework, I did research on video understanding at the [VISLab](https://ivi.fnwi.uva.nl/vislab/) advised by Prof. dr. [Cees Snoek](https://www.ceessnoek.info/) and Dr. [Makarand Tapaswi](https://www.iiit.ac.in/people/faculty/Makarand/). 
 <!-- (IIIT Hyderabad, India) -->
@@ -162,6 +162,26 @@ hr {
 ### Selected publications
 
 <div class="mydiv">
+  <h5> <b>2025</b></h5>
+  <hr class="hr">
+</div>
+
+<div class="mydiv">
+    <div class="leftdiv">
+      <img src="./assets/img/lift-architecture-explainer1-ezgif.com-video-to-gif-converter.gif" alt="drawing" style="width:100%;"/>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="https://arxiv.org/abs/2509.08502">Chirality in Action: Time-Aware Video Representation Learning by Latent Straightening</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Andrew Zisserman</div>
+      <div class="papervenue">NeurIPS 2025</div>
+      <div class="paperlinks"> <a href="https://arxiv.org/abs/2509.08502">ArXiv</a> &nbsp; | &nbsp; <a href="assets/pdf/bagad-neurips2025-final.pdf">Paper</a> &nbsp; | &nbsp; <a href="https://bpiyush.github.io/lift-website/">Project page</a> &nbsp; | &nbsp; <a href="https://github.com/bpiyush/lift">Code</a> &nbsp; | <a href="https://huggingface.co/datasets/bpiyush/chirality-in-action">Dataset</a> &nbsp; | &nbsp;
+      <a href="#">Poster</a> &nbsp; | &nbsp; <a href="#">Video</a> 
+      </div> 
+    </div>
+</div>
+
+
+<div class="mydiv">
   <h5> <b>2024</b></h5>
   <hr class="hr">
 </div>
@@ -177,7 +197,7 @@ hr {
     <div class="rightdiv">
       <div class="papertitle"><a href="https://arxiv.org/abs/2411.11222">The Sound of Water: Inferring Physical Properties from Pouring Liquids</a></div>
       <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Makarand Tapaswi, Cees G. M. Snoek, Andrew Zisserman</div>
-      <div class="papervenue">ArXiV 2024</div>
+      <div class="papervenue">ICASSP 2025</div>
       <div class="paperlinks"> <a href="https://arxiv.org/abs/2411.11222">ArXiv</a> &nbsp; | &nbsp; <a href="https://arxiv.org/abs/2411.11222">Paper</a> &nbsp; | &nbsp; <a href="https://bpiyush.github.io/pouring-water-website/">Project page</a> &nbsp; | &nbsp; <a href="https://github.com/bpiyush/SoundOfWater">Code</a> &nbsp; | &nbsp;
       <a href="#">Poster</a> &nbsp; | &nbsp; <a href="#">Video</a> 
       </div> 
@@ -346,7 +366,7 @@ Grounding Using Attention-Model Explainability</a></div>
   <h5> <b>Miscellaneous</b></h5>
   <hr class="hr">
   <ul style="font-size:15px">
-    <li> Service: Emergency reviewer at ECCV 2022, Reviewer at CVPR 2023 </li>
+    <li> Service: Reviewer at ECCV 2022, CVPR 2023, ECCV 2024, ICCV 2025, NeurIPS 2025, CVPR 2025. Awarded outstanding reviewer at <a href="https://cvpr.thecvf.com/Conferences/2023/OutstandingReviewers">CVPR 2023</a> and <a href="https://cvpr.thecvf.com/Conferences/2025/ProgramCommittee">CVPR 2025</a>.</li>
     <li> Teaching: TA for Deep Learning (<a href="https://uvadlc-notebooks.readthedocs.io/en/latest/">DL1</a>) at the University of Amsterdam </li>
     <li> Invited lecture for the Fairness in AI course at the University of Amsterdam </li>
   </ul>

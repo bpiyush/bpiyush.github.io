@@ -168,6 +168,20 @@ hr {
 
 <div class="mydiv">
     <div class="leftdiv">
+      <img src="./assets/img/tara-arch.png" alt="drawing" style="width:100%;"/>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="#">TARA: Simple and Efficient Time Aware RetrievalAdaptation of MLLMs for Video Understanding</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Andrew Zisserman</div>
+      <div class="papervenue">ArXiv 2025</div>
+      <div class="paperlinks"> <a href="#">ArXiv</a> &nbsp; | &nbsp; <a href="./assets/pdf/tara.pdf">Paper</a> &nbsp; | &nbsp; <a href="#">Project page</a> &nbsp; | &nbsp; <a href="#">Code</a> &nbsp; | <a href="#">Dataset</a> &nbsp; | &nbsp;
+      <a href="#">Poster</a> &nbsp; | &nbsp; <a href="#">Video</a> 
+      </div> 
+    </div>
+</div>
+
+<div class="mydiv">
+    <div class="leftdiv">
       <img src="./assets/img/lift-architecture-explainer1-ezgif.com-video-to-gif-converter.gif" alt="drawing" style="width:100%;"/>
     </div>
     <div class="rightdiv">

@@ -171,10 +171,10 @@ hr {
       <img src="./assets/img/tara-arch.png" alt="drawing" style="width:100%;"/>
     </div>
     <div class="rightdiv">
-      <div class="papertitle"><a href="#">TARA: Simple and Efficient Time Aware RetrievalAdaptation of MLLMs for Video Understanding</a></div>
+      <div class="papertitle"><a href="https://arxiv.org/abs/2512.13511">TARA: Text Adapted Retrieval Alignment for Nuanced Video Retrieval</a></div>
       <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Andrew Zisserman</div>
       <div class="papervenue">ArXiv 2025</div>
-      <div class="paperlinks"> <a href="#">ArXiv</a> &nbsp; | &nbsp; <a href="./assets/pdf/tara.pdf">Paper</a> &nbsp; | &nbsp; <a href="#">Project page</a> &nbsp; | &nbsp; <a href="#">Code</a> &nbsp; | <a href="#">Dataset</a> &nbsp; | &nbsp;
+      <div class="paperlinks"> <a href="https://arxiv.org/abs/2512.13511">ArXiv</a> &nbsp; | &nbsp; <a href="https://arxiv.org/pdf/2512.13511">Paper</a> &nbsp; | &nbsp; <a href="https://bpiyush.github.io/tara-website/">Project page</a> &nbsp; | &nbsp; <a href="https://github.com/bpiyush/TARA">Code</a> &nbsp; | <a href="https://huggingface.co/datasets/bpiyush/chirality-in-action">Dataset</a> &nbsp; | &nbsp;
       <a href="#">Poster</a> &nbsp; | &nbsp; <a href="#">Video</a> 
       </div> 
     </div>

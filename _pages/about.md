@@ -162,7 +162,7 @@ hr {
 ### Selected publications
 
 <div class="mydiv">
-  <h5> <b>2025</b></h5>
+  <h5> <b>2026</b></h5>
   <hr class="hr">
 </div>
 
@@ -178,6 +178,11 @@ hr {
       <a href="#">Poster</a> &nbsp; | &nbsp; <a href="#">Video</a> 
       </div> 
     </div>
+</div>
+
+<div class="mydiv">
+  <h5> <b>2025</b></h5>
+  <hr class="hr">
 </div>
 
 <div class="mydiv">

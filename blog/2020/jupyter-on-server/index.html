@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Piyush Bagad | Jupyter on Remote Machine without Port Mapping</title>
+<meta name="description" content="Master AI Student at University of Amsterdam.
+">
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.17.0/css/mdb.min.css" integrity="sha256-/SwJ2GDcEt5382i8zqDwl36VJGECxEoIcBIuoLmLR4g=" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"  integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="canonical" href="/blog/2020/jupyter-on-server/">
+
+<!-- Open Graph -->
+
+
+<!-- LaTeX -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    inlineMath: [['$','$']]
+  }
+});
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light bg-white navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      
+      
+      
+      
+      <a class="navbar-brand title font-weight-lighter" href="/">
+       <span class="font-weight-bold">Piyush</span>   Bagad
+      </a>
+      
+      <!-- Navbar Toogle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/teaching/">
+                academics
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                projects
+                
+              </a>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-5">
+      
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Jupyter on Remote Machine without Port Mapping</h1>
+    <p class="post-meta">November 23, 2020</p>
+  </header>
+
+  <article class="post-content">
+    <p><a href="https://jupyter.org/">Jupyter</a> is one of most useful tools for any kind of interactive computing, especially important for research folks who would like to visualise data, models, results and try out bunch of things quickly. This post might be hinted towards a research audience but applies fairly generally to any developer. Often, as researchers, we use remote machines (like AWS instances or on-prem infrastructure). Although Google colab is a brilliant tool of the Jupyter-on-the-cloud kind, it is not feasible to use on our own remote instance since it sits on Google’s cloud. If we want to use jupyter on a remote machine, the general practice is to do port-mapping between your local computer and the remote machine. But I find that quite tedious (you have to start a jupyter lab onto the remote machine, do port-mapping locally, and do this every single time). Can we do something like a jupyter-on-the-remote machine accessible through the IP address of the machine? That is precisely what this blog is about.</p>
+
+<h3 id="install-jupyter-lab">Install Jupyter lab</h3>
+
+<p>The <a href="https://jupyter.org/install">official documentation</a> is the best source for installing instructions. I prefer using docker and installing it inside it OR simply in a virtual environment using:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>jupyterlab
+</code></pre></div></div>
+
+<h3 id="add-jupyter-config-file">Add jupyter config file</h3>
+
+<p>After activating the virtual environment, run</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jupyter notebook <span class="nt">--generate-config</span>
+</code></pre></div></div>
+
+<p>Open the “jupyter_notebook_config.py” configuration file inside the “.jupyter” folder with your preferred text editor. Find the commented out configuration line that defines the value of “c.NotebookApp.ip”, and change the value to ‘0.0.0.0’ to allow remote connections from all IP addresses (realistically, you may not want to do this).</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>vi ./.jupyter/jupyter_notebook_config.py
+<span class="c"># Configuration file for jupyter-notebook.</span>
+...
+<span class="c">#------------------------------------------------------------------------------</span>
+<span class="c"># NotebookApp(JupyterApp) configuration</span>
+<span class="c">#------------------------------------------------------------------------------</span>
+...
+<span class="c">## The IP address the notebook server will listen on.</span>
+<span class="c">#c.NotebookApp.ip = 'localhost'</span>
+c.NotebookApp.ip <span class="o">=</span> <span class="s1">'0.0.0.0'</span>
+</code></pre></div></div>
+
+<p>For more information on this, check out this <a href="https://luppeng.wordpress.com/2017/04/18/remote-access-to-jupyter-notebook/">nice tutorial</a>.</p>
+
+<h3 id="add-a-password">Add a password</h3>
+
+<p>Set a login password with the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>jupyter notebook password
+Enter password:
+Verify password:
+<span class="o">[</span>NotebookPasswordApp] Wrote hashed password to /home/user/.jupyter/jupyter_notebook_config.json
+</code></pre></div></div>
+
+<p>A hash of the password is stored in the file listed above.</p>
+
+<h3 id="start-jupyter-lab">Start Jupyter Lab</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jupyter lab <span class="nt">--no-browser</span> <span class="nt">--port</span><span class="o">=</span>8001
+</code></pre></div></div>
+
+<p>This would start a jupyter lab at the following address:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Remote-machne-IP&gt;:8001
+</code></pre></div></div>
+
+<p>Go to this address, enter the password and that’s it! You can keep this running in the backgrounnd using <code class="language-plaintext highlighter-rouge">tmux</code> or <code class="language-plaintext highlighter-rouge">screen</code>. You can now work with the Jupyter lab without the worry of broken network etc. If the internet breaks (and this has been run inside <code class="language-plaintext highlighter-rouge">tmux</code> on the remote machine), the lab will continue to be hosted. You simply need to reload the same address. You can also share this link with your collegues to share results with them! You can work collaboratively on the same lab! I found this to be super useful for my productivity and I hope you find it too! Cheers.</p>
+
+
+  </article>
+
+  
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    &copy; Copyright 2026 Piyush Bagad.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+    Last updated: October 15, 2026.
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- Load Core and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.0/umd/popper.min.js" integrity="sha256-OH05DFHUWzr725HmuHo3pnuvUUn+TJuj8/Qz9xytFEw=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.17.0/js/mdb.min.js"  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" integrity="sha256-V8SV2MO1FUb63Bwht5Wx9x6PVHNa02gv8BgH/uH3ung=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js" integrity="sha256-F/Xda58SPdcUCr+xhSGz9MA2zQBPb0ASEYKohl8UCHc=" crossorigin="anonymous"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+<!-- Load Mansory & imagesLoaded -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+<!-- Project Cards Layout -->
+<script type="text/javascript">
+  // Init Masonry
+  var $grid = $('.grid').masonry({
+    gutter: 10,
+    horizontalOrder: true,
+    itemSelector: '.grid-item',
+  });
+  // layout Masonry after each image loads
+  $grid.imagesLoaded().progress( function() {
+    $grid.masonry('layout');
+  });
+</script>
+
+
+
+
+
+
+
+</html>

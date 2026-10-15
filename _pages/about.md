@@ -6,7 +6,7 @@ description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: dp-2024.jpg
+  image: E6IjSr0l_400x400.jpg
   address: >
 
 news: true
@@ -113,6 +113,10 @@ This is sample text wrapped around image. Let me check how long can it go? -->
   transform: scale(2.5); /* (250% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
+.leftdiv.no-zoom:hover {
+  transform: none;
+}
+
 .papertitle {
     /* font-size: 1.1vw; */
     font-size: 0.95em;
@@ -168,12 +172,38 @@ hr {
 
 <div class="mydiv">
     <div class="leftdiv">
+      <video src="./assets/img/recognition-by-imagination-teaser.mp4" autoplay muted loop playsinline style="width:100%;"></video>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="https://openreview.net/forum?id=aYWgDnVVRq">Recognition by Imagination: A Generative Approach to Form-from-Motion</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Makarand Tapaswi, Andrew Zisserman</div>
+      <div class="papervenue">Under review</div>
+      <div class="paperlinks"> <a href="https://openreview.net/forum?id=aYWgDnVVRq">OpenReview</a> &nbsp; | &nbsp; <a href="assets/pdf/recognition-by-imagination.pdf">Paper</a> &nbsp; | &nbsp; Project page (coming soon) &nbsp; | &nbsp; Code (coming soon)
+      </div>
+    </div>
+</div>
+
+<div class="mydiv">
+    <div class="leftdiv">
+      <img src="./assets/img/forces-at-your-fingertips-teaser.gif" alt="drawing" style="width:100%;"/>
+    </div>
+    <div class="rightdiv">
+      <div class="papertitle"><a href="assets/pdf/forces-at-your-fingertips.pdf">Forces at your fingertips: Estimating Hand-Object Contact Forces using Newtonian Physics</a></div>
+      <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Taein Kwon</div>
+      <div class="papervenue">Under review</div>
+      <div class="paperlinks"> <a href="assets/pdf/forces-at-your-fingertips.pdf">Paper</a>
+      </div>
+    </div>
+</div>
+
+<div class="mydiv">
+    <div class="leftdiv">
       <img src="./assets/img/tara-arch.png" alt="drawing" style="width:100%;"/>
     </div>
     <div class="rightdiv">
       <div class="papertitle"><a href="https://arxiv.org/abs/2512.13511">TARA: Text Adapted Retrieval Alignment for Nuanced Video Retrieval</a></div>
       <div class="paperauthors"><b><u>Piyush Bagad</u></b>, Andrew Zisserman</div>
-      <div class="papervenue">ArXiv 2025</div>
+      <div class="papervenue">ECCV 2026</div>
       <div class="paperlinks"> <a href="https://arxiv.org/abs/2512.13511">ArXiv</a> &nbsp; | &nbsp; <a href="https://arxiv.org/pdf/2512.13511">Paper</a> &nbsp; | &nbsp; <a href="https://bpiyush.github.io/tara-website/">Project page</a> &nbsp; | &nbsp; <a href="https://github.com/bpiyush/TARA">Code</a> &nbsp; | <a href="https://huggingface.co/datasets/bpiyush/chirality-in-action">Dataset</a> &nbsp; | &nbsp;
       <a href="#">Poster</a> &nbsp; | &nbsp; <a href="#">Video</a> 
       </div> 
@@ -187,7 +217,7 @@ hr {
 
 <div class="mydiv">
     <div class="leftdiv">
-      <img src="./assets/img/lift-architecture-explainer1-ezgif.com-video-to-gif-converter.gif" alt="drawing" style="width:100%;"/>
+      <video src="./assets/dino_trajectory-15.mp4" autoplay muted loop playsinline style="width:100%;"></video>
     </div>
     <div class="rightdiv">
       <div class="papertitle"><a href="https://arxiv.org/abs/2509.08502">Chirality in Action: Time-Aware Video Representation Learning by Latent Straightening</a></div>
@@ -210,8 +240,8 @@ hr {
 
 
 <div class="mydiv">
-    <div class="leftdiv">
-      <img src="./assets/img/pitch_on_spectrogram-compressed.gif" alt="drawing" style="width:100%;"/>
+    <div class="leftdiv no-zoom">
+      <video id="pouring-water-teaser" src="./assets/x1-video-pouring-with-sound.mp4" loop playsinline controls preload="metadata" style="width:100%;"></video>
     </div>
     <div class="rightdiv">
       <div class="papertitle"><a href="https://arxiv.org/abs/2411.11222">The Sound of Water: Inferring Physical Properties from Pouring Liquids</a></div>
